@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:15
+    container_name: testcraft_db
+    restart: always
+    environment:
+      POSTGRES_USER: user_qa
+      POSTGRES_PASSWORD: password_qa
+      POSTGRES_DB: testcraft_db
+    ports:
+      - "5432:5432"
